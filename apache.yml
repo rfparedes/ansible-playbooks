@@ -4,10 +4,10 @@
   tasks:
   - name: latest Apache version installed
     zypper:
-      name: httpd
+      name: apache2
       state: latest
   - name: Apache enabled and running
     service:
-      name: httpd
+      name: apache2
       enabled: true
       state: started
