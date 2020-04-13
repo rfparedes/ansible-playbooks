@@ -14,5 +14,5 @@
   - name: chrony enabled and running
     service:
       name: chrony
-       enabled: true
-       state: started
+      enabled: true
+      state: started
