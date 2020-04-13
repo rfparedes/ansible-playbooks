@@ -11,8 +11,8 @@
       name: nginx
       enabled: true
       state: started
-  - name: chrony enabled and running
+  - name: chronyd enabled and running
     service:
-      name: chrony
+      name: chronyd
       enabled: true
       state: started
