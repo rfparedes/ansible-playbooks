@@ -1,1 +1,13 @@
-
+---
+- name: nginx server installed
+  hosts: all
+  tasks:
+  - name: latest nginx version installed
+    zypper:
+      name: nginx
+      state: latest
+  - name: nginx enabled and running
+    service:
+      name: nginx
+      enabled: true
+      state: started
