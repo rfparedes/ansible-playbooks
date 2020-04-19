@@ -35,7 +35,6 @@
 - hosts: all
   tasks:
     - name: copy tarball
-      copy:
-        src: bootstrap.yaml_files/scripts.tgz
+      get_url:
+        url: http://mercury/ansible_files/scripts.tgz
         dest: /tmp/scripts.tgz
-        remote_src: yes
