@@ -1,0 +1,40 @@
+#yaml basics for ansible
+
+#A list is created in yaml like so:
+user:
+- bob
+- rob
+- rich
+- heidi
+
+#A dictionary is created in yaml like so:
+user:
+  name: bob
+  job: engineer
+  salary: 100000
+
+#To include new lines in the text, use | :
+include_newlines: |
+  type some text
+  more text
+  more text
+
+#To ignore the newlines in the text, use > :
+fold_newlines: >
+  type some text
+  more text
+  more text
+
+#Special characters:
+{}
+[]
+:
+|
+>
+"{{ variable_name }}"
+
+#yes is true, no is false
+become: yes
+
+#wrap floating point values in quotes
+version: "1.0"
