@@ -1,5 +1,6 @@
 - hosts: all
   tasks:
+    - include_vars: groupvars/all.yml
     - name: create working directory
       file:
         name: "{{ working_dir }}"
