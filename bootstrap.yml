@@ -37,4 +37,4 @@
     - name: copy tarball
       copy:
         src: bootstrap.yaml_files/scripts.tgz
-        dest: /tmp
+        dest: /tmp/scripts.tgz
