@@ -38,3 +38,4 @@
       copy:
         src: bootstrap.yaml_files/scripts.tgz
         dest: /tmp/scripts.tgz
+        remote_src: yes
