@@ -1,7 +1,9 @@
 - hosts: all
   tasks:
     - name: create working directory
-      state: directory
+      file:
+        name: "{{ working_dir }}"
+        state: directory
     - name: write service list
       lineinfile:
         path: "{{ working_dir }}/services.txt"
