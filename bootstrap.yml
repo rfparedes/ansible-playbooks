@@ -32,9 +32,9 @@
         name: xyzcorp_network
         state: present
 
-- hosts: all
-  tasks:
-    - name: copy tarball
-      copy:
-        src: bootstrap.yaml_files/scripts.tgz
-        dest: /tmp
+# - hosts: all
+#   tasks:
+#     - name: copy tarball
+#       copy:
+#         src: bootstrap.yaml_files/scripts.tgz
+#         dest: /tmp
