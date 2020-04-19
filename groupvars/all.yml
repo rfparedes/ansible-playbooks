@@ -1,0 +1,13 @@
+working_dir: /home/ansible/working
+
+# list variable
+service_list:
+- httpd
+- nfs
+- mariadb
+
+# dictionary variable
+share_paths:
+  nfs: /mnt/nfs
+  cifs: /mnt/cifs
+  iscsi: /mnt/iscsi
