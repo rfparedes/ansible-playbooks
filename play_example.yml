@@ -10,3 +10,6 @@
       yum:
         name: nmap-ncat
         state: latest
+
+--- # another play.  multiple plays are a playbook
+- hosts: all
