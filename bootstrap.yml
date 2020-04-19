@@ -1,0 +1,40 @@
+- hosts: all
+  tasks:
+    - name: edit host file
+      lineinfile:
+        path: /etc/hosts
+        line: "169.168.0.1 ansible.xyzcorp.com"
+    - name: install elinks
+      package:
+        name: elinks
+        state: latest
+    - name: create audit user
+      user:
+        name: xyzcorp_audit
+        state: present
+    - name: update motd
+      copy:
+        src: bootstrap.yml_files/motd
+        dest: /etc/motd
+    - name: update issue
+      copy:
+        src: bootstrap.yml_files/issue
+        dest: /etc/issue
+
+- hosts: all
+  tasks:
+    - name: install netcat
+      package:
+        name: nmap
+        state: latest
+    - name: create network user
+      user:
+        name: xyzcorp_network
+        state: present
+
+- hosts: all
+  tasks:
+    - name: copy tarball
+      copy:
+        src: bootstrap.yaml_files/scripts.tgz
+        dest: /tmp

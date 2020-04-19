@@ -2,11 +2,12 @@
 - hosts: all
   become: yes
   tasks:
-    - name: install software
+    # Prepare system for operational use
+    - name: install cli web client
       yum:
         name: elinks
         state: latest
-    - name: install more software
+    - name: install network utilities
       yum:
         name: nmap
         state: latest
