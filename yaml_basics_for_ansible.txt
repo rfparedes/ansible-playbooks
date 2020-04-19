@@ -38,5 +38,3 @@ become: yes
 
 #wrap floating point values in quotes
 version: "1.0"
-
-test
