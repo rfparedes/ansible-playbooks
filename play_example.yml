@@ -8,5 +8,5 @@
         state: latest
     - name: install more software
       yum:
-        name: nmap-ncat
+        name: nmap
         state: latest
