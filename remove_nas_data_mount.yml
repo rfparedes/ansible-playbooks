@@ -10,8 +10,8 @@
 
     - name: Check if /mercury/data is empty
       find:
-        paths: '/mercury/data'
-        register: files_found
+        paths: '/mercury/data/'
+      register: files_found
 
     - name: Remove /mercury/data directory if empty
       file:
