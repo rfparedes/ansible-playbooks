@@ -7,3 +7,9 @@
         fstype: nfs
         state: unmounted
         opts: "rw,relatime,vers=3,rsize=131072,wsize=131072,namlen=255,hard,proto=tcp,timeo=600,retrans=2,sec=sys,mountaddr=192.168.1.149,mountvers=3,mountport=892,mountproto=udp,local_lock=none,addr=192.168.1.149"
+
+    - name: remove fstab entry
+      blockinfile:
+        path: /etc/fstab
+        marker: # {mark} ANSIBLE MANAGED BLOCK
+        state: absent
