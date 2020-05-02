@@ -10,12 +10,12 @@
 
     - name: Check if /mercury/data is empty
       find:
-        paths: '/mercury/data/'
+        paths: '/test/'
       register: files_found
 
     - name: Remove /mercury/data directory if empty
       file:
-        path: /mercury/data
+        path: /test
         state: absent
       when: files_found.matched == 0
 
