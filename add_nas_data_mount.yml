@@ -9,3 +9,10 @@
       blockinfile:
         path: /etc/fstab
         block: "192.168.1.149:/volume1/data /mercury/data nfs rw,relatime,vers=3,rsize=131072,wsize=131072,namlen=255,hard,proto=tcp,timeo=600,retrans=2,sec=sys,mountaddr=192.168.1.149,mountvers=3,mountport=892,mountproto=udp,local_lock=none,addr=192.168.1.149 0 0"
+    - name: mount it manually until next reboot
+      mount:
+        path: /mercury/data
+        src: 192.168.1.149:/volume1/data
+        fstype: nfs
+        state: mounted
+        opts: "rw,relatime,vers=3,rsize=131072,wsize=131072,namlen=255,hard,proto=tcp,timeo=600,retrans=2,sec=sys,mountaddr=192.168.1.149,mountvers=3,mountport=892,mountproto=udp,local_lock=none,addr=192.168.1.149"
