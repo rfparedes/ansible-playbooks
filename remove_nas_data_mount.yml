@@ -11,5 +11,5 @@
     - name: remove fstab entry
       blockinfile:
         path: /etc/fstab
-        marker: # {mark} ANSIBLE MANAGED BLOCK
+        marker: "# {mark} ANSIBLE MANAGED BLOCK"
         state: absent
